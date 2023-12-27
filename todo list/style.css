@@ -1,0 +1,10 @@
+.container{
+    text-align: center;
+}
+.checked{
+    text-decoration: line-through;
+}
+li{
+    list-style: none;
+    cursor: pointer;
+}
