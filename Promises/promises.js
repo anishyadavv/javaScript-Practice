@@ -1,6 +1,4 @@
 const promise1 = new Promise(function(resolve, reject){
-
-
     setTimeout(function(){
         console.log("promise1 runed");
         resolve();
@@ -46,7 +44,7 @@ const promiseo4  = new Promise (function(resolve, reject){
 })
 
 promiseo4.then(function(response){
-    console.log("userData - ",response);   
+    console.log("userData - ",response);
 });
 
 promiseo4.catch(function(error){
