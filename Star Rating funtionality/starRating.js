@@ -3,14 +3,10 @@ let stars = document.getElementsByClassName('star');
 let rating = document.getElementById("rating");
 function star(n){
     remove();
-    for(let i=0;i<n;i++){
-        if(n==1) cls = "one";
-        else if(n==2) cls = "two";
-        else if(n==3) cls = "three";
-        else if(n==4) cls = "four";
-        else if(n==5) cls = "five";
-        stars[i].className = "star "+cls;
+    for(let i=0;i<n-1;i++){
+        stars[i].className = "star blue";
     }
+    stars[n-1].className = "star red";
     rating.innerHTML = `Rating is : ${n}/5`;
 }
 

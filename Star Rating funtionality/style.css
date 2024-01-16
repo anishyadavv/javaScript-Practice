@@ -16,18 +16,9 @@
 .stars{
     cursor: pointer;
 }
-.one{
-    color: brown;
+.blue{
+    color: blue;
 }
-.two{
-    color: brown;
-}
-.three{
-    color:yellow;
-}
-.four{
-    color:yellow;
-}
-.five{
-    color:green;
+.red{
+    color: red;
 }

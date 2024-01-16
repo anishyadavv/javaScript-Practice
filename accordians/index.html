@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian</title>
+</head>
+<style>
+
+    .container{
+        width: 80vw;
+        margin: auto;
+        margin-top: 50px;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    .section{
+        border: 1px solid black;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        padding-left: 20px;
+    }
+    .content{
+        display: none;
+    }
+    .heading{
+        cursor: pointer;
+    }
+    .display{
+        display: block;
+    }
+
+</style>
+<body>
+
+    <div class="container">
+        <div class="section">
+            <h1 class="heading" onclick="expand('heading1')">Heading</h1>
+            <p class="content" id="heading1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore ad illo quia consectetur laudantium, suscipit beatae eaque obcaecati corporis rem quas, inventore hic molestias iste rerum quam soluta quo minus!</p>
+        </div>
+        <div class="section">
+            <h1 class="heading" onclick="expand('heading2')">Heading</h1>
+            <p class="content"  id="heading2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore ad illo quia consectetur laudantium, suscipit beatae eaque obcaecati corporis rem quas, inventore hic molestias iste rerum quam soluta quo minus!</p>
+        </div>
+        <div class="section">
+            <h1 class="heading" onclick="expand('heading3')">Heading</h1>
+            <p class="content"  id="heading3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore ad illo quia consectetur laudantium, suscipit beatae eaque obcaecati corporis rem quas, inventore hic molestias iste rerum quam soluta quo minus!</p>
+        </div>
+        <div class="section">
+            <h1 class="heading" onclick="expand('heading4')">Heading</h1>
+            <p class="content"  id="heading4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore ad illo quia consectetur laudantium, suscipit beatae eaque obcaecati corporis rem quas, inventore hic molestias iste rerum quam soluta quo minus!</p>
+        </div>
+    </div>
+    <script>
+    function expand(content){
+        const allcontent = document.querySelectorAll(".content");
+        allcontent.forEach(e=>{
+            e.style.display = "none";
+        })
+        const contents = document.getElementById(content);
+        contents.style.display = 'block';
+    }
+    </script>
+</body>
+</html>
