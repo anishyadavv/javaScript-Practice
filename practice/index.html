@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="list">
+        <li>OFF</li>
+        <li>OFF</li>
+        <li>OFF</li>
+        <li>OFF</li>
+        <li>OFF</li>
+        <li>OFF</li>
+    </ul>
+    <script>
+
+        const listItems = document.getElementsByTagName('li');
+
+        const handleHover = (event) => {
+        return event.target.innerText = 'ON';
+        };
+        if(listItems.length > 1) {
+        listItems.forEach(item => item.addEventListener('mouseover', handleHover));
+        }
+    </script>
+</body>
+</html>
