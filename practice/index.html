@@ -5,26 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<style>
+    #element{
+        width: 200px;
+        height: 200px;
+        background: black;
+        color: white;
+        text-align: center;
+        line-height: 200px;
+        font-size: 30px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+</style>
 <body>
 
-    <ul id="list">
-        <li>OFF</li>
-        <li>OFF</li>
-        <li>OFF</li>
-        <li>OFF</li>
-        <li>OFF</li>
-        <li>OFF</li>
-    </ul>
+    <div id="element">
+        Hover Me
+    </div>
+
     <script>
 
-        const listItems = document.getElementsByTagName('li');
+        const element = document.querySelector('#element');
 
-        const handleHover = (event) => {
-        return event.target.innerText = 'ON';
+        const toggleColor = (isEntering) => {
+            console.log(isEntering);
+        element.style.background = isEntering ? 'orange' : 'black';
         };
-        if(listItems.length > 1) {
-        listItems.forEach(item => item.addEventListener('mouseover', handleHover));
-        }
+
+        // type in your code here
+        element.addEventListener('mousemove',(e)=>toggleColor(true))
+        element.addEventListener('mouseleave',(e)=>toggleColor(false))
+
     </script>
 </body>
 </html>
