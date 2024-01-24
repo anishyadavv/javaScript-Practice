@@ -7,39 +7,20 @@
 </head>
 
 <style>
-    #element{
-        width: 200px;
-        height: 200px;
-        background: black;
-        color: white;
-        text-align: center;
-        line-height: 200px;
-        font-size: 30px;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
 </style>
 <body>
 
-    <div id="element">
-        Hover Me
-    </div>
+        <input id="checkbox" />
+        <label for="checkbox">checkbox</label>
+        <button type="button" id="button">Verify Code</button>
 
     <script>
 
-        const element = document.querySelector('#element');
-
-        const toggleColor = (isEntering) => {
-            console.log(isEntering);
-        element.style.background = isEntering ? 'orange' : 'black';
-        };
-
+        const button = document.getElementById('button');
+        button.addEventListener('click', () => {
         // type in your code here
-        element.addEventListener('mousemove',(e)=>toggleColor(true))
-        element.addEventListener('mouseleave',(e)=>toggleColor(false))
+        document.getElementById('checkbox').setAttribute('type','checkbox');
+        });
 
     </script>
 </body>
