@@ -1,11 +1,45 @@
-.container {
+body{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
     justify-content: space-between;
     align-items: center;
     width: 72vw;
     overflow: hidden;
+    height: 400px;
+    position: relative;
 }
-.slides{
-display: none;
-
+.display{
+    display: block;
+}
+.none{
+    display: none;
+}
+.slides img{
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+.nav{
+    position: absolute;
+    display: flex;
+    z-index: 10;
+    color: white;
+    top:50%;
+    transform: translateY(-50%);
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.nav div{
+    cursor: pointer;
+    background-color: black;
+    padding: 10px;
+    width: 20px;
+    border-radius: 50%;
+    text-align: center;
 }
