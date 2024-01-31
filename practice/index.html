@@ -10,20 +10,19 @@
 </style>
 <body>
 
-       <input type="text" id="firstName" placeholder="Max" value="Max"/>
-        <input type="text" id="lastName" placeholder="Musterman" value="Musterman"/>
-        <input type="text" id="fullName" placeholder="full name" readonly/>
+        <input id="checkbox" />
+        <label for="checkbox">checkbox</label>
         <button type="button" id="button">Verify Code</button>
 
     <script>
 
         const button = document.getElementById('button');
-        button.addEventListener('click' , () => {
+        button.addEventListener('click', () => {
         // type in your code here
-        const fname = document.getElementById('firstName');
-        const lname = document.getElementById('lastName');
-        const fullname = document.getElementById('fullName');
-        fullname.value = fname.value + ' ' + lname.value;
+        const checkbox =  document.getElementById('checkbox');
+        checkbox.setAttribute('type','checkbox');
+        checkbox.checked = true;
+
         });
 
     </script>
